@@ -1,3 +1,9 @@
+# IT6039 Software Testing and Maintenance
+#
+# Student: 90054169
+#
+# Project: Ten-Pin Game
+
 class BowlingGame(object):
     def __init__(self):
         self.throw= []
