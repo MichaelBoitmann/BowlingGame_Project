@@ -1,7 +1,8 @@
-from BowlingGame import BowlingGame
+from TenPin_Game import BowlingGame
 
 import unittest
  
+
 class BowlingGameTests(unittest.TestCase):
 
     def throw_many(self, game, number_of_times, pins):
@@ -31,33 +32,33 @@ class BowlingGameTests(unittest.TestCase):
 
     def test_different_throws(self):
         game = BowlingGame()
-        game.throws(6)
-        game.throws(0)
+        game.throw(6)
+        game.throw(0)
         game.throw(7)
-        game.throws(0)
-        game.throws(2)
+        game.throw(0)
+        game.throw(2)
         for _ in range(15):
-            game.throws(0)
+            game.throw(0)
         game.calculate_score()
         self.assertEquals(game.score, 15)
 
 
     def test_for_spare(self):
         game = BowlingGame()
-        game.throws(4)
-        game.throws(6)
-        game.throws(7)
-        game.throws(0)
+        game.throw(4)
+        game.throw(6)
+        game.throw(7)
+        game.throw(0)
         for _ in range(16):
-            game.throws(0)
+            game.throw(0)
         game.calculate_score()
         self.assertEquals(game.score, 24)
 
     def test_for_strike(self):
         game=BowlingGame()
-        game.throws(10)
-        game.throws(4)
-        game.throws(2)
+        game.throw(10)
+        game.throw(4)
+        game.throw(2)
         self.throw_many(game, 17,0)
         game.calculate_score()
         self.assertEquals(game.score, 22)
