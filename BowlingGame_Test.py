@@ -6,7 +6,7 @@ import unittest
 class BowlingGameTests(unittest.TestCase):
 
     def throw_many(self, game, number_of_times, pins):
-        for _ in range(number_of_times):
+        for i in range(number_of_times):
             game.throw(pins)
 
     def test_all_gutters(self):
