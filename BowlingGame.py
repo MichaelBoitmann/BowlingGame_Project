@@ -11,12 +11,14 @@ class BowlingGame(object):
 
     def throw(self, pins):
         self.throws.append(pins)
-
-
-    def calculate_score(self, frames):
+ 
+ 
+    def calculate_score(self, frames):  # addedd "frames" inside the function
+                                        # parenthese
         ball = 0
-        for frames in range(10):
-            if self.throws[ball]==10:
+        
+        for frames in range(10):        # corrected all the syntax error
+            if self.throws[ball]==10:   # from "throw" to "throws"
                 self.score +=10 + self.throws[ball+1] + self.throws[ball +2]
                 ball += 1
             elif self.throws[ball] + self.throws[ball+1] == 10:
