@@ -34,9 +34,12 @@ class BowlingGame(object):
         """        
 
         ball = 0
+
+        """Changed throw to throws
+        """        
         
-        for frames in range(10):        # corrected all the syntax error
-            if self.throws[ball]==10:   # from "throw" to "throws"
+        for frames in range(10):     
+            if self.throws[ball]==10:
                 self.score +=10 + self.throws[ball+1] + self.throws[ball +2]
                 ball += 1
             elif self.throws[ball] + self.throws[ball+1] == 10:
