@@ -5,16 +5,34 @@
 # Project: Ten-Pin Game
 
 class BowlingGame(object):
+
+    """Class for Bowling Game frames
+
+    Args:
+        object ([self]): [
+            Class has functions which allow the tests to check if a strike, 
+            spare or number of pins were counted
+            ]
+    """
+    
     def __init__(self):
-        self.throws= []
+        self.throws= [] # refactor throw to throw
         self.score= 0
+
+        """Generate Array for throws of Score
+        """    
 
     def throw(self, pins):
         self.throws.append(pins)
+
+        """ Uses pins for every throw out of 10
+        """         
  
- 
-    def calculate_score(self):  # addedd "frames" inside the function
-                                        # parenthese
+    def calculate_score(self):
+
+        """This is the function for throwing, striking and spare
+        """        
+
         ball = 0
         
         for frames in range(10):        # corrected all the syntax error

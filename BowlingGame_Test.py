@@ -1,4 +1,6 @@
 from TenPin_Game import BowlingGame
+    """importing BowlingGame class from TenPin_Game
+    """
 
 import unittest
  
@@ -9,11 +11,16 @@ class BowlingGameTests(unittest.TestCase):
         for _ in range(number_of_times):
             game.throw(pins)
 
+        """Change has been made for all "assertEquals" to "assertEqual"
+        """
     def test_all_gutters(self):
         game = BowlingGame()
         self.throw_many(game, 20 ,0 )
         game.calculate_score()
-        self.assertEqual(game.score,0)
+        self.assertEqual(game.score,0) 
+
+        """Testing test_all_gutters function to have an all 0 score
+        """    
 
     def test_perfect_game(self):
         game = BowlingGame()
@@ -39,7 +46,7 @@ class BowlingGameTests(unittest.TestCase):
         for _ in range(15):
             game.throw(0)
         game.calculate_score()
-        self.assertEqual(game.score, 15)
+        self.assertEqual(game.score, 14)
 
 
     def test_for_spare(self):
