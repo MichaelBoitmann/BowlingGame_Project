@@ -1,5 +1,6 @@
 from TenPin_Game import BowlingGame
-    """importing BowlingGame class from TenPin_Game
+
+    """Importing BowlingGame class from TenPin_Game
     """
 
 import unittest
@@ -28,6 +29,10 @@ class BowlingGameTests(unittest.TestCase):
         game.calculate_score()
         self.assertEqual(game.score, 300)
 
+        """Testing complete strike for all 10 frames
+        that will score 300 points
+        """        
+
     def test_all_ones(self):
         game = BowlingGame()
         number_of_times = 20
@@ -35,6 +40,10 @@ class BowlingGameTests(unittest.TestCase):
         self.throw_many(game, number_of_times, pins)
         game.calculate_score()
         self.assertEqual(game.score, 20)
+
+        """Testing the function that will throw 20x and will hit
+        1 pin per frame
+        """        
 
     def test_different_throws(self):
         game = BowlingGame()
@@ -48,6 +57,10 @@ class BowlingGameTests(unittest.TestCase):
         game.calculate_score()
         self.assertEqual(game.score, 14)
 
+        """Testing the function Test Different Throws on different frames
+        and will produce a score
+        """        
+
 
     def test_for_spare(self):
         game = BowlingGame()
@@ -60,6 +73,9 @@ class BowlingGameTests(unittest.TestCase):
         game.calculate_score()
         self.assertEqual(game.score, 24)
 
+        """Testing the function Test For Spare that will score for spare
+        """        
+
     def test_for_strike(self):
         game=BowlingGame()
         game.throw(10)
@@ -68,3 +84,9 @@ class BowlingGameTests(unittest.TestCase):
         self.throw_many(game, 17,0)
         game.calculate_score()
         self.assertEqual(game.score, 22)
+
+        """Testing the function Test For Strike will calculate the strike and 
+        other score for the following frame
+        """        
+
+        
